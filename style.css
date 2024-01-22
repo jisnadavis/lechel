@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+header audio {
+  background-color: black;
+  display: none;
+}
+header {
+  background-color: black;
+  color: beige;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100svw;
+}
+.date {
+  animation-name: date-moving;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  width: 50svw;
+}
+.tittle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: brown;
+  gap: 20px;
+  animation-name: bright;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+}
+.tittle > h2 {
+  font-weight: bolder;
+  font-size: 30px;
+}
+main {
+  width: 100svw;
+}
+.cordero {
+  padding: 40px;
+  width: 100svw;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  min-width: 375px;
+  gap: 30px;
+}
+.cordero img {
+  width: 400px;
+  animation-name: goat;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+}
+
+.cordero ul > li {
+  font-weight: bold;
+}
+.cordero h3 {
+  font-weight: bolder;
+  font-style: italic;
+  color: orangered;
+}
+.pan {
+  display: flex;
+  background-color: blue;
+  flex-direction: column;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://casaemiliana.com/wp-content/uploads/2023/01/como-asar-cordero.jpg');
+  flex-wrap: wrap;
+  padding: 40px;
+}
+.pan h1 {
+  font-weight: bold;
+  animation-name: precio;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  font-size: 25px;
+}
+
+footer {
+  background-color: rgb(10, 10, 10);
+  color: beige;
+  padding: 40px;
+  animation-name: foot;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100svw;
+}
+@keyframes date-moving {
+  from {
+    font-size: 20px;
+  }
+  to {
+    font-size: 25px;
+  }
+}
+@keyframes bright {
+  from {
+    filter: sepia(500);
+  }
+}
+@keyframes goat {
+  from {
+    filter: brightness(2);
+    border-radius: 50px;
+  }
+  to {
+    filter: saturate();
+    border-radius: 500px;
+  }
+}
+@keyframes precio {
+  from {
+    color: black;
+    font-weight: bolder;
+    font-size: 28;
+  }
+  to {
+    color: blue;
+    font-size: 35px;
+    filter: drop-shadow();
+  }
+}
+@media (max-width: 500px) {
+  @keyframes date-moving {
+    from {
+      font-size: 10px;
+    }
+    to {
+      font-size: 15px;
+    }
+  }
+  .cordero h3 {
+    font-weight: bolder;
+    font-style: italic;
+    color: orangered;
+    font-size: 15px;
+  }
+  .cordero ul > li {
+    font-weight: bold;
+    font-size: 10px;
+  }
+  .cordero img {
+    max-width: 375px;
+  }
+}
